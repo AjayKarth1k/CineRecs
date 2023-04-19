@@ -1,0 +1,12 @@
+<label>Give Movie :<input type="text" [(ngModel)]="movieName"></label>
+<button (click)="submitMovieName()">Get movie suggestions</button>
+<div *ngIf="movieSuggestions">
+  <h2>Movies suggested for you:</h2>
+  <ul>
+    <li *ngFor="let suggestion of movieSuggestions">{{ suggestion }}</li>
+  </ul>
+</div>
+<div *ngIf="errorMessage">
+  <h2>Error:</h2>
+  <p>{{ errorMessage }}</p>
+</div>
