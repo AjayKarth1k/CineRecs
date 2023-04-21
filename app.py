@@ -8,6 +8,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import csv
 
+# set up TMDb API credentials
+TMDB_API_KEY = "b2a2c76c34c1a8b3cef1d6be69e0881f"
+
 app = Flask(__name__)
 CORS(app)
 
@@ -45,16 +48,31 @@ def movie():
     for movie in sorted_similar_movies:
         index = movie[0]
         title_from_index = movies_data.loc[index, 'title']
-        if len(suggested_movies) < 30:
-            suggested_movies.append({'title': title_from_index, 'genres': movies_data.loc[index, 'genres'], 'runtime': movies_data.loc[index, 'runtime'], 'vote_average': movies_data.loc[index, 'vote_average'], 'director': movies_data.loc[index, 'director']})
-    # write the movie suggestions to a new CSV file
-    with open('E:\Movie-Recommendation-System\webapp\src\\assets\\recmovie.csv', mode='w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerow(['Title', 'Genres', 'Runtime', 'IMDB', 'Director'])
-        for movie in suggested_movies:
-            writer.writerow([movie['title'], movie['genres'], movie['runtime'], movie['vote_average'], movie['director']])
-    # return the movie suggestions as JSON data
-    return jsonify("Succeeded")
+        if len(suggested_movies) < 8:
+            suggested_movies.append({'title': title_from_index, 'genres': movies_data.loc[index, 'genres'], 'runtime': movies_data.loc[index, 'runtime'], 'vote_average': movies_data.loc[index, 'vote_average'], 'director': movies_data.loc[index, 'director'], 'poster_url': ''})
+
+    # get the poster URLs for the suggested movies using TMDb API
+    for movie in suggested_movies:
+        movie_title = movie['title']
+        # make an API request to get the movie details
+        url = f"https://api.themoviedb.org/3/search/movie?api_key={TMDB_API_KEY}&query={movie_title}"
+        response = requests.get(url)
+        data = response.json()
+        # get the first search result
+        if data['total_results'] > 0:
+            movie_id = data['results'][0]['id']
+            # make another API request to get the poster URL
+            url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={TMDB_API_KEY}&append_to_response=images"
+            response = requests.get(url)
+            data = response.json()
+            if 'images' in data:
+                poster_path = data['images']['posters'][0]['file_path']
+                poster_url = f"https://image.tmdb.org/t/p/w500{poster_path}"
+                movie['poster_url'] = poster_url
+
+
+    return jsonify(suggested_movies)
 
 if __name__ == '__main__':
     app.run(debug=True)
+

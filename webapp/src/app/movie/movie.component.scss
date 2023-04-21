@@ -1,0 +1,119 @@
+.navbar-collapse{
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.last-element{
+  margin-left: 800px;
+  color: #ffffff;
+}
+.navbar-brand
+{
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 5rem;
+}
+.hawk{
+  padding-right: 10px;
+  color: #ffffff;
+  
+  font-weight: 800;
+}
+.er{
+  color: #e91d24;
+}
+.navbar{
+  font-family: 'Lexend', sans-serif;
+  margin-right: 900px;
+  top: 0;
+  background-color: #1a171e;
+  box-shadow: none;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 5rem;
+}
+.btn-yellow{
+  background-color: #ffffff;
+  margin-right:16px;
+  box-shadow: none;
+  font-weight: 600;
+  color: black;
+}
+.btn-white{
+  margin-right:16px;
+  border: 1px solid black;
+  background-color: #FFEACC;
+  font-weight: 600;
+  color: black;
+  box-shadow: none;
+}
+.btn-position{
+  text-align: right;
+}
+
+
+
+
+
+// page
+.container-card{
+  margin-top: 120px;
+}
+.card {
+  position: relative;
+  border-radius: 30px;
+  margin-bottom: 54px;
+  animation: slide-up 1.0s ease-out;
+}
+
+.card-img-top {
+  border-radius: 4px 4px 0 0;
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  height: 45%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.823);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.card-overlay h5 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 800;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  font-family: 'Mulish', sans-serif;
+}
+
+.card-overlay p {
+  margin-bottom: 4px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-overlay p span {
+  font-weight: 800;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
