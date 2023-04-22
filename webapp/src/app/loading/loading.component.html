@@ -34,20 +34,9 @@
 </nav>
 
 
-<!-- page -->
-<div class="container-home">
-<h1 class="mb-3 home ">Movie Recommendations</h1>
-    <div class="row mb-3 ">
-      <div class="col-6">
-        <div class="input-group">
-          <input type="text" class="form-control search-bar" placeholder="Enter a movie name" [(ngModel)]="movieName" />
+
+    <div class="loader">
+        <div class="inner">
         </div>
-        <button class="btn btn-primary button" type="button" (click)="submitMovieName()" >Search</button>
-        <div *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</div>
-        <ul class="list-group mt-3">
-          <li class="list-group-item" *ngFor="let suggestion of suggestedMovies">{{ suggestion }}</li>
-        </ul>
       </div>
-    </div>
-  </div>
 </div>

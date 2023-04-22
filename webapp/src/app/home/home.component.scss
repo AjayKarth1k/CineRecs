@@ -1,0 +1,88 @@
+.navbar-collapse{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+  }
+  .last-element{
+    margin-left: 800px;
+    color: #ffffff;
+  }
+  .navbar-brand
+  {
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 5rem;
+  }
+  .hawk{
+    // padding-right: 10px;
+    color: #ffffff;
+    
+    font-weight: 800;
+  }
+  .er{
+    color: #e91d24;
+  }
+  .navbar{
+    font-family: 'Lexend', sans-serif;
+    margin-right: 900px;
+    top: 0;
+    // background-color: #1a171ee2;
+    box-shadow: none;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 5rem;
+  }
+  .btn-yellow{
+    background-color: #ffffff;
+    margin-right:16px;
+    box-shadow: none;
+    font-weight: 600;
+    color: black;
+  }
+  .btn-white{
+    margin-right:16px;
+    border: 1px solid black;
+    background-color: #FFEACC;
+    font-weight: 600;
+    color: black;
+    box-shadow: none;
+  }
+  .btn-position{
+    text-align: right;
+  }
+
+
+
+//   page
+.home{
+    font-weight: 800;
+    font-family: 'Lexend', sans-serif;
+    color: #ffffff;
+}
+.search-bar{
+background-color: #ffffffb5;
+border-color:#ffffffb5;
+}
+.button{
+font-weight: 800;
+margin-top: 10px;
+background-color: #e91d24;
+border-radius: 10px;
+box-shadow: none;
+font-family: 'Lexend', sans-serif;
+}
+.container-home{
+    margin-left: 500px;
+    margin-top: 300px;
+    font-family: 'Mulish', sans-serif;
+    padding-right: 20px;
+}
+.component-container{
+  background-image: url('../../assets/netflix-poster.jpg');
+  background-size: contain;
+  background-position: center;
+  height: 100vh;
+  padding-top: 1px;
+}

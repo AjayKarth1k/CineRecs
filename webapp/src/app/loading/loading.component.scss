@@ -1,0 +1,217 @@
+.navbar-collapse{
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.last-element{
+  margin-left: 800px;
+  color: #ffffff;
+}
+.navbar-brand
+{
+  font-size: 30px;
+  font-weight: 600;
+  padding-right: 5rem;
+}
+.hawk{
+  // padding-right: 10px;
+  color: #ffffff;
+  
+  font-weight: 800;
+}
+.er{
+  color: #e91d24;
+}
+.navbar{
+  font-family: 'Lexend', sans-serif;
+  margin-right: 900px;
+  top: 0;
+  // background-color: #1a171ee2;
+  box-shadow: none;
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  height: 5rem;
+}
+.btn-yellow{
+  background-color: #ffffff;
+  margin-right:16px;
+  box-shadow: none;
+  font-weight: 600;
+  color: black;
+}
+.btn-white{
+  margin-right:16px;
+  border: 1px solid black;
+  background-color: #FFEACC;
+  font-weight: 600;
+  color: black;
+  box-shadow: none;
+}
+.btn-position{
+  text-align: right;
+}
+
+
+
+// page
+.component-container{
+    background-image: url('../../assets/netflix-poster.jpg');
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+    padding-top: 1px;
+    overflow: hidden;
+}
+  
+  .loader {
+    animation: spin 1.5s linear alternate infinite;
+    background:#e91d24;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+  }
+  
+  .loader:before {
+    background:#e91d24;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 0.5em;
+    width: 0.5em;
+    z-index: 2;
+  }
+  
+  .loader:after {
+    background: #262E2A;
+    border-radius: 50%;
+    box-shadow: 0em -2.60em #262E2A,
+      2.25em -4.02em #262E2A,
+      2.25em -1.25em #262E2A,
+      4.60em 0em #262E2A,
+      2.25em 1.25em #262E2A,
+      2.25em 4.02em #262E2A,
+      0em 2.60em #262E2A,
+      -2.25em 4.02em #262E2A,
+      -2.25em 1.25em #262E2A,
+      -4.60em 0em #262E2A,
+      -2.25em -1.25em #262E2A,
+      -2.25em -4.02em #262E2A;
+    content: '';
+    display: block;
+    height: 2em;
+    width: 2em;
+  }
+  
+  .inner {
+    animation: load 1.5s linear alternate infinite;
+    border: solid 1px#e91d24;
+    border-radius: 50%;
+    height: 1.75em;
+    width: 1.75em;
+    z-index: 1;
+  }
+  
+  .loader, .loader:before, .loader:after, .inner {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  @keyframes load {
+    0% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em #262E2A,
+        2.25em 1.25em #262E2A,
+        0em 2.60em #262E2A,
+        -2.25em 1.25em #262E2A,
+        -2.25em -1.25em #262E2A;
+    }
+    15% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em #262E2A,
+        2.25em 1.25em #262E2A,
+        0em 2.60em #262E2A,
+        -2.25em 1.25em #262E2A,
+        -2.25em -1.25em#e91d24;
+    }
+    30% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em #262E2A,
+        2.25em 1.25em #262E2A,
+        0em 2.60em #262E2A,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+    45% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em #262E2A,
+        2.25em 1.25em #262E2A,
+        0em 2.60em#e91d24,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+    60% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em #262E2A,
+        2.25em 1.25em#e91d24,
+        0em 2.60em#e91d24,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+    75% {
+      box-shadow: 0em -2.60em #262E2A,
+        2.25em -1.25em#e91d24,
+        2.25em 1.25em#e91d24,
+        0em 2.60em#e91d24,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+    90% {
+      box-shadow: 0em -2.60em#e91d24,
+        2.25em -1.25em#e91d24,
+        2.25em 1.25em#e91d24,
+        0em 2.60em#e91d24,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+    100% {
+      box-shadow: 0em -2.60em#e91d24,
+        2.25em -1.25em#e91d24,
+        2.25em 1.25em#e91d24,
+        0em 2.60em#e91d24,
+        -2.25em 1.25em#e91d24,
+        -2.25em -1.25em#e91d24;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(60deg);
+    }
+    30% {
+      transform: rotate(120deg);
+    }
+    45% {
+      transform: rotate(180deg);
+    }
+    60% {
+      transform: rotate(240deg);
+    }
+    75% {
+      transform: rotate(300deg);
+    }
+    90% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }

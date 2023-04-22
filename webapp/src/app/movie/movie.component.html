@@ -1,9 +1,11 @@
+<div class="component-container">
+
 <nav class="navbar navbar-expand-lg navbar-custom">
   <!-- Container wrapper -->
   <div class="container">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#">
-      <span class="hawk">Suggested</span><span class="er">Movies</span>
+      <span class="hawk">Cine</span><span class="er">Recs</span>
     </a>
 
     <!-- Toggle button -->
@@ -31,7 +33,6 @@
   </div>
   <!-- Container wrapper -->
 </nav>
-
 <!-- page -->
 <div class="container">
   <div class="row container-card">
@@ -42,14 +43,14 @@
           <h5 class="card-title">{{ movie.title }}</h5>
           <p class="card-text"><span>Genres: </span>{{ movie.genres }}</p>
           <p class="card-text"><span>Runtime: </span>{{ movie.runtime }}</p>
-          <p class="card-text"><span>IMDB: </span>{{ movie.vote_average }}</p>
+          <p class="card-text"><span class="IMDb">IMDb</span> : {{ movie.vote_average }}</p>
           <p class="card-text"><span>Director: </span>{{ movie.director }}</p>
         </div>
       </div>
     </div>
   </div>
-
   <div *ngIf="suggestedMovies.length == 0">
     <p>No suggested movies found.</p>
   </div>
+</div>
 </div>

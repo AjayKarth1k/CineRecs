@@ -48,7 +48,7 @@ def movie():
     for movie in sorted_similar_movies:
         index = movie[0]
         title_from_index = movies_data.loc[index, 'title']
-        if len(suggested_movies) < 8:
+        if len(suggested_movies) < 12:
             suggested_movies.append({'title': title_from_index, 'genres': movies_data.loc[index, 'genres'], 'runtime': movies_data.loc[index, 'runtime'], 'vote_average': movies_data.loc[index, 'vote_average'], 'director': movies_data.loc[index, 'director'], 'poster_url': ''})
 
     # get the poster URLs for the suggested movies using TMDb API

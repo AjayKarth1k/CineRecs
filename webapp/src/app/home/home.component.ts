@@ -15,6 +15,7 @@ export class HomeComponent {
   constructor(private http: HttpClient, private router: Router) {}
 
   submitMovieName() {
+    this.router.navigate(['/loading']);
     this.http
       .post<any>('http://127.0.0.1:5000/home', { movie_name: this.movieName })
       .subscribe(
